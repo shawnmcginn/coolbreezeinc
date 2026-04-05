@@ -4,3 +4,12 @@ _bmad/
 
 # Proprietary design source/image files
 docs/images/
+
+# Unreferenced local media/assets (kept local, excluded from repo)
+assets/dryer-vent.mov
+assets/hero-videocropped.mov
+assets/frames/
+assets/indoorunit-icon.png
+assets/indoorunit.png
+assets/outdoorunit-icon.png
+assets/outdoorunit.jpg
