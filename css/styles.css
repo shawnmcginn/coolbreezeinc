@@ -32,6 +32,11 @@
 
 html { scroll-behavior: smooth; font-size: 16px; }
 
+/* Keep in-page anchor targets visible below fixed phone/nav bars */
+section[id] {
+  scroll-margin-top: calc(var(--bar-h) + var(--nav-h) + 18px);
+}
+
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--text);
@@ -112,6 +117,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section--off-white { background: var(--off-white); }
 .section--dark    { background: var(--charcoal); }
 .section--blue    { background: var(--blue); }
+
+.section--mascot  { position: relative; overflow: hidden; }
+.section__mascot {
+  position: absolute;
+  right: -30px;
+  bottom: -20px;
+  height: 110%;
+  width: auto;
+  opacity: .10;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.section--mascot .container { position: relative; z-index: 1; }
+@media (max-width: 768px) {
+  .section__mascot { height: 60%; opacity: .07; }
+}
 
 .section-label {
   display: inline-block;
@@ -957,15 +979,38 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================================
    FOOTER
    ============================================================ */
-.footer { background: #080f16; padding: 64px 0 32px; }
+.footer {
+  background: #080f16;
+  padding: 64px 0 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__mascot {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  height: 92%;
+  width: auto;
+  opacity: .12;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .footer__mascot { height: 70%; right: -30px; opacity: .08; }
+}
 
 .footer__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
 }
-.footer__brand img { margin-bottom: 16px; }
+.footer__bottom { position: relative; z-index: 1; }
 .footer__brand p   { font-size: 0.875rem; color: rgba(255,255,255,.38); line-height: 1.72; }
 
 .footer__links,
