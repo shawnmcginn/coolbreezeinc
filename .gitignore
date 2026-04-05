@@ -1,0 +1,6 @@
+# BMad framework files
+_bmad/
+.github/skills/
+
+# Proprietary design source/image files
+docs/images/
