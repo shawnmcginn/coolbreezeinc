@@ -81,7 +81,7 @@
     .mascot-watermark {
       position: absolute;
       left: 50%;
-      top: 530px;
+      top: 680px;
       transform: translate(-50%, -50%);
       width: 460px;
       opacity: 0.3;
@@ -119,10 +119,10 @@
       line-height: 1.16;
       font-weight: 900;
       letter-spacing: 0.01em;
-      color: #0f1923;
+      color: #ffffff;
       max-width: 100%;
       text-align: center;
-      text-shadow: none;
+      text-shadow: 0 4px 14px rgba(8, 22, 41, 0.44);
       position: relative;
       z-index: 3;
     }
@@ -132,7 +132,7 @@
       font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: rgba(15, 25, 35, 0.75);
+      color: rgba(255, 255, 255, 0.9);
       line-height: 1.4;
       position: relative;
       z-index: 3;
@@ -145,8 +145,8 @@
       line-height: 0.9;
       letter-spacing: -0.02em;
       font-weight: 900;
-      color: #0f1923;
-      text-shadow: none;
+      color: #fff;
+      text-shadow: 0 6px 18px rgba(7, 19, 35, 0.62);
       position: relative;
       z-index: 3;
       text-align: center;
@@ -156,7 +156,7 @@
       margin: 10px auto 0;
       font-size: 0.8rem;
       line-height: 1.28;
-      color: rgba(15, 25, 35, 0.8);
+      color: rgba(255, 255, 255, 0.94);
       max-width: 280px;
       position: relative;
       z-index: 3;
@@ -165,7 +165,7 @@
 
     .pricing {
       position: absolute;
-      top: 706px;
+      top: 650px;
       left: 0;
       right: 0;
       padding: 12px 16px 0;
@@ -219,6 +219,25 @@
       box-shadow: inset 0 0 0 1px rgba(240, 165, 0, 0.24);
     }
 
+    .card .details {
+      margin-top: 6px;
+      font-size: 0.56rem;
+      color: #4a5f79;
+      line-height: 1.5;
+      list-style: none;
+      padding: 0;
+    }
+
+    .card .details li::before {
+      content: '✓ ';
+      color: #3575bb;
+      font-weight: 700;
+    }
+
+    .card.featured .details li::before {
+      color: #d4920a;
+    }
+
     .contact {
       position: absolute;
       bottom: 0;
@@ -252,6 +271,9 @@
     .qr-wrap {
       justify-self: end;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .qr {
@@ -295,14 +317,29 @@
           <div class="card">
             <div class="k">Mini Split</div>
             <div class="v">$159.99 <span>+ tax</span></div>
+            <ul class="details">
+              <li>Deep coil clean</li>
+              <li>Filter wash</li>
+              <li>Sanitize &amp; deodorize</li>
+            </ul>
           </div>
           <div class="card">
             <div class="k">Dryer Vent</div>
             <div class="v">$149.99 <span>+ tax</span></div>
+            <ul class="details">
+              <li>Full duct clean</li>
+              <li>Faster drying time</li>
+              <li>Improves efficiency</li>
+            </ul>
           </div>
           <div class="card featured">
-            <div class="k">Bundle</div>
+            <div class="k">Bundle &amp; Save</div>
             <div class="v">$259.98 <span>+ tax</span></div>
+            <ul class="details">
+              <li>Both services</li>
+              <li>Save $50</li>
+              <li>Most popular!</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -310,7 +347,7 @@
       <div class="contact">
         <div>
           <p class="phone">(506) 333-7186</p>
-          <p class="url">www.coolbreezeinc.ca</p>
+          <p class="url">coolbreezeinc.ca</p>
         </div>
 
         <div class="qr-wrap">
