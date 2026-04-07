@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Door Hanger Concepts v2</title>
+<style>
+:root{--n:#0f2238;--b:#2567ad;--a:#f0a500;--bg:#e8edf3;--w:#fff;--m:#607089}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--n)}
+.wrap{max-width:1320px;margin:0 auto;padding:24px}
+h1{margin:0;font-size:clamp(1.6rem,2.3vw,2.2rem)} .sub{margin:8px 0 18px;color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(230px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #d6dfeb;border-radius:12px;padding:10px;box-shadow:0 8px 20px rgba(15,25,35,.08)}
+.card h3{margin:0;font-size:.98rem}.card p{margin:4px 0 10px;color:var(--m);font-size:.8rem}
+.h{aspect-ratio:1/2.35;max-width:290px;margin:0 auto;border:1px solid #cad5e5;border-radius:6px;overflow:hidden;position:relative;background:#fff}
+.hole{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:58px;height:58px;border-radius:50%;background:var(--bg);border:10px solid #fff;z-index:5}
+.slot{position:absolute;top:42px;left:50%;transform:translateX(-50%);width:94px;height:42px;background:var(--bg);clip-path:polygon(0 0,100% 0,68% 100%,32% 100%);z-index:4}
+.bar{position:absolute;left:0;right:0;padding:0 14px}.logo{font-weight:900;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.big{font-weight:900;line-height:.92;letter-spacing:-.02em;font-size:1.86rem;margin:0}.copy{font-size:.83rem;line-height:1.4;margin:9px 0}
+.cta{display:inline-block;padding:7px 11px;border-radius:999px;font-size:.73rem;font-weight:800;text-transform:uppercase}
+.phone{font-size:1.1rem;font-weight:900;margin-top:8px}.tiny{font-size:.71rem;opacity:.9}
+.v1 .t{top:0;height:122px;background:#122239;color:#fff;padding-top:80px;text-align:center}.v1 .m{top:122px;bottom:116px;background:linear-gradient(180deg,#327bc7,#2567ad);color:#fff;padding-top:12px}.v1 .b{bottom:0;height:116px;background:#0b1625;color:#fff;padding-top:10px}
+.v1 .offer{position:absolute;right:10px;top:138px;background:var(--a);color:#13243a;border-radius:9px;padding:8px 8px 6px;font-weight:900;line-height:.9;text-align:center}
+.v2 .t{top:0;height:126px;background:#fff;color:#1a2b44;padding-top:82px;text-align:center;border-bottom:2px solid #e3eaf4}.v2 .m{top:126px;bottom:110px;background:#f4f8fc;color:#11263e;padding-top:12px}.v2 .b{bottom:0;height:110px;background:var(--a);color:#17283f;padding-top:12px}
+.v3 .t{top:0;height:122px;background:#111c2b;color:#fff;padding-top:80px;text-align:center}.v3 .m{top:122px;bottom:126px;background:#1f3249;color:#fff;padding-top:12px}.v3 .b{bottom:0;height:126px;background:#fff;color:#132640;padding-top:10px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.tile{font-size:.7rem;font-weight:700;text-align:center;background:#f2f6fb;border:1px solid #dbe4f0;border-radius:6px;padding:6px}
+.v4 .t{top:0;height:122px;background:linear-gradient(180deg,#3791cf,#2e79bc);color:#fff;padding-top:80px;text-align:center}.v4 .m{top:122px;bottom:118px;background:#fff;color:#12273f;padding-top:12px}.v4 .b{bottom:0;height:118px;background:#0f1e2f;color:#fff;padding-top:10px}
+.v4 .mas{position:absolute;right:-18px;bottom:94px;width:120px;opacity:.18}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(230px,1fr))}} @media(max-width:650px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Door Hanger Concepts v2</h1>
+  <div class="sub">Sharper, real-world direct-mail layouts. Pick any 1 and I’ll produce a polished front + back print version.</div>
+  <div class="grid">
+    <article class="card"><h3>1) Hero Offer</h3><p>Conversion-first</p><div class="h v1"><div class="hole"></div><div class="slot"></div><div class="offer">$50<br>OFF</div><div class="bar t"><div class="logo">Cool Breeze Inc.</div></div><div class="bar m"><h4 class="big">CLEAN AIR.<br>NO STRESS.</h4><div class="copy">Mini split + dryer vent cleaning in one visit.</div><span class="cta" style="background:#fff;color:#2567ad">Book This Week</span></div><div class="bar b"><div class="tiny">Saint John · Quispamsis · Rothesay</div><div class="phone">(506) 333-7186</div><div class="tiny">coolbreezeinc.ca</div></div></div></article>
+    <article class="card"><h3>2) Premium Clean</h3><p>White-space premium</p><div class="h v2"><div class="hole"></div><div class="slot"></div><div class="bar t"><div class="logo">Cool Breeze Inc.</div></div><div class="bar m"><h4 class="big" style="font-size:1.76rem">PROFESSIONAL<br>HOME AIR CARE</h4><div class="copy">Local experts. Transparent pricing. Reliable service.</div></div><div class="bar b"><div style="font-weight:900;font-size:1.24rem">Bundle Special</div><div class="copy" style="margin-top:6px">Save when you combine both services.</div><div class="phone" style="font-size:1rem">(506) 333-7186</div></div></div></article>
+    <article class="card"><h3>3) Problem/Solution</h3><p>Education led</p><div class="h v3"><div class="hole"></div><div class="slot"></div><div class="bar t"><div class="logo">Cool Breeze Inc.</div></div><div class="bar m"><h4 class="big" style="font-size:1.72rem">LOW AIRFLOW?<br>MUSTY SMELLS?</h4><div class="copy">We remove buildup and restore performance fast.</div></div><div class="bar b"><div class="tiles"><div class="tile">Deep Coil Clean</div><div class="tile">Filter Wash</div><div class="tile">Vent Clear-Out</div><div class="tile">Final Check</div></div><div class="phone" style="font-size:1rem">(506) 333-7186</div></div></div></article>
+    <article class="card"><h3>4) Mascot Friendly</h3><p>Brand personality</p><div class="h v4"><div class="hole"></div><div class="slot"></div><img class="mas" src="../assets/branding/brand-icon.svg" alt="" aria-hidden="true"><div class="bar t"><div class="logo">Cool Breeze Inc.</div></div><div class="bar m"><h4 class="big" style="font-size:1.78rem">YOUR LOCAL<br>AIR TEAM</h4><div class="copy">Friendly service, cleaner air, no surprise fees.</div><span class="cta" style="background:#0f1e2f;color:#fff">Free Quote</span></div><div class="bar b"><div class="tiny">Book in under 60 seconds</div><div class="phone">(506) 333-7186</div><div class="tiny">coolbreezeinc.ca</div></div></div></article>
+  </div>
+</div>
+</body>
+</html>

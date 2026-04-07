@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Door Knocker Concepts</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --ink: #1a2332;
+      --muted: #5e6b7f;
+      --line: #0f2238;
+      --accent: #c08a2c;
+      --card: #ffffff;
+      --border: #d9e0e8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top right, #dde6f0 0%, var(--bg) 45%);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 8px 26px rgba(15, 25, 35, 0.06);
+    }
+    .title {
+      font-weight: 800;
+      font-size: 0.98rem;
+      margin: 0 0 2px;
+    }
+    .tag {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+    }
+    .sketch {
+      width: 100%;
+      aspect-ratio: 1.15 / 1;
+      border: 1px dashed #d5dce4;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #fbfcfe 0%, #f3f6fa 100%);
+      display: block;
+    }
+    .door { fill: #eef2f7; stroke: #c8d2de; stroke-width: 2; }
+    .stroke { fill: none; stroke: var(--line); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .metal { fill: #d2a551; stroke: #8f6724; stroke-width: 3; }
+    .dark { fill: #344b68; stroke: #0f2238; stroke-width: 3; }
+    .plate { fill: #fdfdfd; stroke: #1a2d46; stroke-width: 4; }
+    .note {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #4a5a72;
+      min-height: 33px;
+    }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Door Knocker Concept Board</h1>
+    <p class="sub">Quick visual directions: classic, modern, mascot-forward, and industrial. Pick your favorite 1-2 and I’ll refine those next.</p>
+
+    <div class="grid">
+      <article class="card">
+        <p class="title">A. Classic Ring + Crest</p>
+        <p class="tag">Heritage • Premium</p>
+        <svg class="sketch" viewBox="0 0 320 280" aria-label="Classic ring and crest concept">
+          <rect class="door" x="84" y="20" width="152" height="240" rx="8"/>
+          <path class="plate" d="M134 52 h52 l16 18 v18 h-84 v-18z"/>
+          <circle class="metal" cx="160" cy="136" r="48" fill="none"/>
+          <circle class="plate" cx="160" cy="136" r="9"/>
+          <line class="stroke" x1="160" y1="184" x2="160" y2="208"/>
+        </svg>
+        <p class="note">Traditional ring with a subtle crest topper.</p>
+      </article>
+
+      <article class="card">
+        <p class="title">B. Mascot Head + Wrench</p>
+        <p class="tag">Brand-forward • Friendly</p>
+        <svg class="sketch" viewBox="0 0 320 280" aria-label="Mascot wrench concept">
+          <rect class="door" x="84" y="20" width="152" height="240" rx="8"/>
+          <circle class="dark" cx="160" cy="78" r="30"/>
+          <path class="plate" d="M134 78 q26 -18 52 0 q-7 24 -26 24 q-19 0 -26 -24z"/>
+          <path class="metal" d="M124 142 l76 -30 l10 20 l-66 34 l14 26 l-18 10 l-18 -32 z"/>
+          <circle class="plate" cx="156" cy="174" r="8"/>
+        </svg>
+        <p class="note">Mascot medallion anchor with wrench-style striker.</p>
+      </article>
+
+      <article class="card">
+        <p class="title">C. Minimal CB Monogram</p>
+        <p class="tag">Modern • Architectural</p>
+        <svg class="sketch" viewBox="0 0 320 280" aria-label="Minimal monogram concept">
+          <rect class="door" x="84" y="20" width="152" height="240" rx="8"/>
+          <rect class="plate" x="122" y="56" width="76" height="144" rx="12"/>
+          <path class="stroke" d="M172 86 q-24 -4 -24 18 q0 22 24 18"/>
+          <path class="stroke" d="M148 122 h20 q20 0 20 18 q0 18 -20 18 h-20"/>
+          <rect class="dark" x="130" y="210" width="60" height="10" rx="5"/>
+        </svg>
+        <p class="note">Interlocked C/B language with hidden drop bar.</p>
+      </article>
+
+      <article class="card">
+        <p class="title">D. Circular Badge</p>
+        <p class="tag">Balanced • Clean</p>
+        <svg class="sketch" viewBox="0 0 320 280" aria-label="Circular badge concept">
+          <rect class="door" x="84" y="20" width="152" height="240" rx="8"/>
+          <circle class="plate" cx="160" cy="94" r="38"/>
+          <circle class="dark" cx="160" cy="94" r="15"/>
+          <path class="metal" d="M108 136 a52 40 0 1 0 104 0" fill="none" stroke="#8f6724" stroke-width="10"/>
+          <circle class="plate" cx="160" cy="176" r="8"/>
+        </svg>
+        <p class="note">Friendly badge top with a half-ring knocker.</p>
+      </article>
+
+      <article class="card">
+        <p class="title">E. Tool Industrial</p>
+        <p class="tag">Rugged • Statement</p>
+        <svg class="sketch" viewBox="0 0 320 280" aria-label="Industrial tool concept">
+          <rect class="door" x="84" y="20" width="152" height="240" rx="8"/>
+          <polygon class="plate" points="160,50 194,70 194,108 160,128 126,108 126,70"/>
+          <path class="dark" d="M118 174 l36 -62 l20 12 l-34 58 l24 16 l-12 18 l-34 -22 z"/>
+          <circle class="plate" cx="154" cy="178" r="8"/>
+        </svg>
+        <p class="note">Hex-bolt backplate with tool-shaped striker.</p>
+      </article>
+
+      <article class="card">
+        <p class="title">F. Coastal Rope Motif</p>
+        <p class="tag">East Coast • Handcrafted</p>
+        <svg class="sketch" viewBox="0 0 320 280" aria-label="Coastal rope concept">
+          <rect class="door" x="84" y="20" width="152" height="240" rx="8"/>
+          <ellipse class="plate" cx="160" cy="88" rx="40" ry="28"/>
+          <path class="stroke" d="M126 86 q7 -8 14 0 q7 8 14 0 q7 -8 14 0 q7 8 14 0" stroke-width="4"/>
+          <path class="metal" d="M160 116 c-30 0 -52 26 -52 52 c0 18 15 32 34 32 c8 0 15 -3 18 -8 c3 5 10 8 18 8 c19 0 34 -14 34 -32 c0 -26 -22 -52 -52 -52z" fill="none" stroke="#8f6724" stroke-width="8"/>
+          <circle class="plate" cx="160" cy="186" r="8"/>
+        </svg>
+        <p class="note">Rope-inspired ring for a maritime personality.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

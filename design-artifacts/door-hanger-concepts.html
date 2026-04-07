@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cool Breeze Door Hanger Concepts</title>
+  <style>
+    :root {
+      --bg: #e9edf2;
+      --ink: #15253a;
+      --muted: #5c6d84;
+      --blue: #1e5299;
+      --blue2: #3575bb;
+      --amber: #f0a500;
+      --dark: #0e1b2b;
+      --card: #ffffff;
+      --line: #d5deea;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: linear-gradient(180deg, #f5f7fa 0%, var(--bg) 100%);
+      color: var(--ink);
+    }
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    h1 { margin: 0; font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+    .sub { margin: 8px 0 18px; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: 0 10px 24px rgba(15,25,35,.08);
+    }
+    .t { font-weight: 800; margin: 2px 0; }
+    .m { color: var(--muted); font-size: .82rem; margin: 0 0 10px; }
+
+    .hanger {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      aspect-ratio: 1/2.35;
+      background: #fff;
+      border: 1px solid #cdd6e3;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hole {
+      position: absolute;
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      left: 50%; transform: translateX(-50%);
+      top: 20px;
+      background: var(--bg);
+      border: 10px solid #fff;
+      z-index: 3;
+    }
+    .notch {
+      position: absolute;
+      top: 48px;
+      left: 50%; transform: translateX(-50%);
+      width: 96px; height: 44px;
+      background: var(--bg);
+      clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+      z-index: 2;
+    }
+
+    .band { position: absolute; left: 0; right: 0; }
+    .logo { font-weight: 900; letter-spacing: .03em; text-transform: uppercase; font-size: .9rem; }
+    .big { font-size: clamp(1.7rem, 2.6vw, 2.1rem); line-height: .95; font-weight: 900; letter-spacing: -.02em; }
+    .copy { font-size: .86rem; line-height: 1.42; }
+    .cta {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .c1 .top { top: 0; height: 120px; background: #172434; color: #fff; padding: 82px 18px 0; text-align: center; }
+    .c1 .mid { top: 120px; bottom: 112px; background: linear-gradient(180deg, #2d74b6 0%, #1f5b98 100%); color: #fff; padding: 16px 18px; }
+    .c1 .bot { bottom: 0; height: 112px; background: #0e1b2b; color: #fff; padding: 14px 18px; }
+
+    .c2 .top { top: 0; height: 130px; background: #fff; color: #1a2c42; padding: 84px 18px 0; text-align: center; }
+    .c2 .mid { top: 130px; bottom: 98px; background: #f2f6fb; color: #17314d; padding: 14px 18px; border-top: 1px solid #dce5f0; border-bottom: 1px solid #dce5f0; }
+    .c2 .bot { bottom: 0; height: 98px; background: #f0a500; color: #172437; padding: 14px 18px; }
+
+    .c3 .top { top: 0; height: 120px; background: #0c1724; color: #fff; padding: 82px 18px 0; text-align: center; }
+    .c3 .mid { top: 120px; bottom: 124px; background: #1b2d44; color: #fff; padding: 16px 18px; }
+    .c3 .bot { bottom: 0; height: 124px; background: #fff; color: #172437; padding: 14px 18px; }
+
+    .c4 .top { top: 0; height: 126px; background: linear-gradient(180deg,#2b7fc3,#2866ab); color: #fff; padding: 84px 18px 0; text-align: center; }
+    .c4 .mid { top: 126px; bottom: 116px; background: #fff; color: #16263d; padding: 14px 18px; }
+    .c4 .bot { bottom: 0; height: 116px; background: #0f1d2d; color: #fff; padding: 14px 18px; }
+
+    .c5 .top { top: 0; height: 126px; background: #fff; color: #16263d; padding: 84px 18px 0; text-align: center; }
+    .c5 .mid { top: 126px; bottom: 118px; background: #f8fbff; color: #16263d; padding: 14px 18px; border-top: 3px solid #d9e5f4; border-bottom: 3px solid #d9e5f4; }
+    .c5 .bot { bottom: 0; height: 118px; background: #3575bb; color: #fff; padding: 14px 18px; }
+
+    .c6 .top { top: 0; height: 120px; background: #192a3f; color: #fff; padding: 82px 18px 0; text-align: center; }
+    .c6 .mid { top: 120px; bottom: 124px; background: linear-gradient(180deg,#2a72b3,#1e5299); color: #fff; padding: 14px 18px; }
+    .c6 .bot { bottom: 0; height: 124px; background: #f0a500; color: #142136; padding: 14px 18px; }
+
+    .tiny { font-size: .73rem; opacity: .85; }
+    .sp { margin-top: 10px; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+    @media (max-width: 1040px) { .grid { grid-template-columns: repeat(2, minmax(260px, 1fr)); } }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Door Hanger Concepts — Cool Breeze</h1>
+    <p class="sub">Actual door hanger directions (front side): punch-hole format, headline, offer, CTA. Pick 1-2 and I’ll do refined production-ready versions.</p>
+
+    <div class="grid">
+      <div class="card">
+        <p class="t">1) Bold Emergency Offer</p>
+        <p class="m">High-contrast • conversion-first</p>
+        <div class="hanger c1">
+          <div class="hole"></div><div class="notch"></div>
+          <div class="band top"><div class="logo">Cool Breeze Inc.</div></div>
+          <div class="band mid">
+            <div class="big">BREATHE<br>EASIER</div>
+            <p class="copy sp">Mini split deep clean + dryer vent safety clean.</p>
+            <span class="cta" style="background:#fff;color:#1f5b98;">Book This Week</span>
+          </div>
+          <div class="band bot">
+            <div class="tiny">Serving Saint John · Quispamsis · Rothesay</div>
+            <div class="sp" style="font-weight:800;font-size:1.22rem;">(506) 333-7186</div>
+            <div class="tiny">coolbreezeinc.ca</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="t">2) Clean + Trust</p>
+        <p class="m">White space • premium</p>
+        <div class="hanger c2">
+          <div class="hole"></div><div class="notch"></div>
+          <div class="band top"><div class="logo">Cool Breeze Inc.</div></div>
+          <div class="band mid">
+            <div class="big" style="font-size:1.92rem;">PROFESSIONAL<br>CLEAN AIR</div>
+            <p class="copy sp">Locally owned. Transparent pricing. Friendly service.</p>
+          </div>
+          <div class="band bot">
+            <div style="font-weight:900;font-size:1.35rem;line-height:1;">$50 OFF</div>
+            <div class="tiny">Bundle: heat pump + dryer vent</div>
+            <div class="sp tiny">Tap or call: (506) 333-7186</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="t">3) Problem / Solution</p>
+        <p class="m">Education-led • direct response</p>
+        <div class="hanger c3">
+          <div class="hole"></div><div class="notch"></div>
+          <div class="band top"><div class="logo">Cool Breeze Inc.</div></div>
+          <div class="band mid">
+            <div class="big" style="font-size:1.72rem;">DIRTY COILS.<br>WEAK AIRFLOW.</div>
+            <p class="copy sp">We restore performance and cleaner indoor air.</p>
+          </div>
+          <div class="band bot">
+            <div class="row">
+              <span class="cta" style="background:#f0a500;color:#13243a;">Free Quote</span>
+              <span class="cta" style="background:#2a71b3;color:#fff;">Same Week</span>
+            </div>
+            <div class="sp" style="font-weight:800;">(506) 333-7186</div>
+            <div class="tiny">coolbreezeinc.ca</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="t">4) Seasonal Service Push</p>
+        <p class="m">Campaign style • timely</p>
+        <div class="hanger c4">
+          <div class="hole"></div><div class="notch"></div>
+          <div class="band top"><div class="logo">Spring Clean Special</div></div>
+          <div class="band mid">
+            <div class="big" style="font-size:1.85rem;">HEAT PUMP<br>TUNE-UP CLEAN</div>
+            <p class="copy sp">Before summer hits, clear buildup and improve efficiency.</p>
+            <span class="cta" style="background:#1e5299;color:#fff;">Get Scheduled</span>
+          </div>
+          <div class="band bot">
+            <div class="tiny">Saint John · KV · Hampton · Grand Bay</div>
+            <div class="sp" style="font-weight:800;font-size:1.22rem;">(506) 333-7186</div>
+            <div class="tiny">coolbreezeinc.ca</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="t">5) Mascot-Friendly</p>
+        <p class="m">Approachable • family-safe</p>
+        <div class="hanger c5">
+          <div class="hole"></div><div class="notch"></div>
+          <div class="band top"><div class="logo">Cool Breeze Inc.</div></div>
+          <div class="band mid">
+            <div class="big" style="font-size:1.72rem;">YOUR HOME<br>AIR TEAM</div>
+            <p class="copy sp">Friendly local techs for mini split and dryer vent cleaning.</p>
+          </div>
+          <div class="band bot">
+            <span class="cta" style="background:#fff;color:#3575bb;">Book In 60 Seconds</span>
+            <div class="sp" style="font-weight:800;">(506) 333-7186</div>
+            <div class="tiny">coolbreezeinc.ca</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="t">6) Offer Stack</p>
+        <p class="m">Value-led • punchy</p>
+        <div class="hanger c6">
+          <div class="hole"></div><div class="notch"></div>
+          <div class="band top"><div class="logo">Cool Breeze Inc.</div></div>
+          <div class="band mid">
+            <div class="big" style="font-size:1.85rem;">ONE VISIT.<br>TWO SERVICES.</div>
+            <p class="copy sp">Mini split deep clean + dryer vent clean. Save time and money.</p>
+          </div>
+          <div class="band bot">
+            <div style="font-weight:900;font-size:1.46rem;line-height:1;">SAVE $50</div>
+            <div class="tiny">Bundle promotion</div>
+            <div class="sp" style="font-weight:800;">(506) 333-7186</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
