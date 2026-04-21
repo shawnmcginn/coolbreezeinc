@@ -129,6 +129,10 @@
           if (res.ok) {
             setStatus('✓ Message sent! We\'ll be in touch soon.', 'success');
             form.reset();
+            // Google Ads conversion tracking
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', { 'send_to': 'AW-18095746441/rJ2-CJ2-_50cEInb3LRD' });
+            }
           } else {
             return res.json().then(function (data) {
               throw new Error(data.error || 'Server error');

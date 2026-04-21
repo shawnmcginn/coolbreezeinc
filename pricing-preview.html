@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Cards Preview</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { background: #f4f6f8; padding: 60px 20px; }
+    .preview-note {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      color: #999;
+      margin-bottom: 40px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    /* ── bigger text overrides ── */
+    .pricing-card__label       { font-size: 2rem; }
+    .pricing-card__amount      { font-size: clamp(4.5rem, 8vw, 6.5rem); }
+    .pricing-card__cents       { font-size: 2.25rem; }
+    .pricing-card__tax         { font-size: 2rem; }
+    .pricing-card__note        { font-size: 2rem; }
+    .pricing-card__addon       { font-size: 1.9rem; }
+    .addon-price               { font-size: 2.1rem !important; }
+    .addon-label               { font-size: 1.9rem !important; }
+    .pricing-card__savings     { font-size: 2rem; }
+    .unit-part span            { font-size: 1.8rem; }
+    .pricing-grid              { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+    .pricing-card              { border: 3px solid #c0cfe0; }
+    .pricing-card--featured    { border: 3px solid var(--blue, #1d6fa4); }
+  </style>
+</head>
+<body>
+
+  <p class="preview-note">Preview — pricing cards (no buttons)</p>
+
+  <section class="section section--white" style="padding-top:0; padding-bottom:60px;">
+    <div class="container">
+      <p class="section-label" style="text-align:center">TRANSPARENT PRICING</p>
+      <h2 class="section-title" style="text-align:center">No Surprises.<br>Ever.</h2>
+
+      <div class="pricing-grid">
+
+        <!-- Mini Split -->
+        <div class="pricing-card">
+          <p class="pricing-card__label">Mini Split Deep Clean</p>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">$159<span class="pricing-card__cents">.99</span></span>
+            <span class="pricing-card__tax">+ tax</span>
+          </div>
+          <div class="pricing-card__note pricing-card__note--units">
+            <span class="unit-part">
+              <span>Head</span>
+              <img src="assets/indoortransparent.png" alt="Head unit icon">
+            </span>
+            <span class="pricing-unit-plus" aria-hidden="true">+</span>
+            <span class="unit-part">
+              <span>Outdoor unit</span>
+              <img src="assets/outdoortransparent.png" alt="Outdoor unit icon">
+            </span>
+          </div>
+          <div class="pricing-card__addon">
+            <span class="addon-price">$74.99 + tax</span>
+            <span class="addon-label addon-label--icon">
+              <span>each additional head</span>
+              <img src="assets/indoortransparent.png" alt="Head unit icon">
+            </span>
+          </div>
+        </div>
+
+        <!-- Dryer Vent -->
+        <div class="pricing-card">
+          <p class="pricing-card__label">Dryer Vent Cleaning</p>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">$149<span class="pricing-card__cents">.99</span></span>
+            <span class="pricing-card__tax">+ tax</span>
+          </div>
+          <p class="pricing-card__note pricing-card__note--icon">
+            <span>Standard rate</span>
+            <img src="assets/dryertransparent.png" alt="Dryer vent icon">
+          </p>
+          <div class="pricing-card__addon">
+            <span class="addon-price">$99.99 + tax</span>
+            <span class="addon-label">when bundled with mini split</span>
+          </div>
+        </div>
+
+        <!-- Bundle — featured -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Best Value</div>
+          <p class="pricing-card__label">Bundle Deal</p>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">$259<span class="pricing-card__cents">.98</span></span>
+            <span class="pricing-card__tax">+ tax</span>
+          </div>
+          <p class="pricing-card__note">Mini split + dryer vent in one visit</p>
+          <div class="pricing-card__bundle-icons" aria-label="Bundle includes indoor head, outdoor unit and dryer vent cleaning">
+            <img src="assets/indoortransparent.png" alt="Indoor head icon">
+            <span class="pricing-unit-plus" aria-hidden="true">+</span>
+            <img src="assets/outdoortransparent.png" alt="Outdoor unit icon">
+            <span class="pricing-unit-plus" aria-hidden="true">+</span>
+            <img src="assets/dryertransparent.png" alt="Dryer vent icon">
+          </div>
+          <span class="pricing-card__savings">Save $50 vs. booking separately</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
