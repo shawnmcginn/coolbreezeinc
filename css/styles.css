@@ -977,6 +977,48 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================================
+   AREAS WE SERVE
+   ============================================================ */
+.areas-intro {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.area-card {
+  background: #f7f9fc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+.area-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+.area-card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin: 0;
+}
+.area-card a { color: var(--blue); }
+@media (max-width: 900px) {
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .areas-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
